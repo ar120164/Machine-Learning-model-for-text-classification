@@ -1,24 +1,24 @@
 # Machine-Learning-model-for-text-classification
 NLP model to classify Paycheck Protection Program (PPP) borrowers
 
-**Objective:** To build a natural language processing model to classify Paycheck Protection Program (PPP) borrowers into companies or individuals based on their names.
+##**Objective:** ## To build a natural language processing model to classify Paycheck Protection Program (PPP) borrowers into companies or individuals based on their names.
 
-**Context**
+##**Context**
 Paycheck Protection Program (PPP) loans are implemented by the U.S. Small Business Administration with support from the Department of the Treasury.  This program provides small businesses with funds to pay up to 8 weeks of payroll costs, including benefits. The funds can also be used to pay interest on mortgages, rent and utilities. The Paycheck Protection Program (PPP) prioritizes millions of Americans employed by small businesses by authorizing up to $659 billion for job maintenance and certain other expenses.
 
 A list of PPP borrowers is available, however, the data does not clearly distinguish whether the borrowers are businesses or individuals. Therefore, the objective is to find a way to classify the list of PPP borrowers into businesses and individuals. On the other hand, two different datasets are available, one with a list of firms and one with a list of individuals. From these two datasets, a natural language processing model is proposed to classify which PPP loan borrowers are companies or individuals from their names. 
 
-**Development**
+##**Development**
 
-  **Model selection**
+**Model selection**
 To select the model, a search was conducted on what models are used for classifying text into categories. In this search, we found a Multinomial Naive Bayes model developed for an analogous case in which the objective was to find the country of origin of a person from his or her name. With this example in mind and what we consulted about its advantages (text mining friendly, faster convergence than other models such as logistic regression, highly scalable and easily handles large datasets), it was decided to apply Multinomial Naive Bayes. However, some of the options found as alternative models are Bernoulli Naive Bayes (another type of Naive Bayes), Logistic Regression, k-Nearest Neighbors, decision trees and support vector machine.
 The Naive Bayes learning algorithm is widely used in text classification problems because it is computationally efficient and simple to implement. It employs the bag-of-words approach, in which individual words in the document serve as features, ignoring word order. There are two types of event models that are widely used: 
 - Bernoulli multivariate event model .
 - Bayes multivariate event model.
 
->The multinomial Naive Bayes algorithm refers to a vector of features in which each term reflects the number of times it occurs or the frequency with which it appears. Bernoulli, on the other hand, is a binary algorithm that determines whether a feature is present or not. Finally, there is also the Gaussian model (not widely used for text classification), which is based on a continuous distribution.
+The multinomial Naive Bayes algorithm refers to a vector of features in which each term reflects the number of times it occurs or the frequency with which it appears. Bernoulli, on the other hand, is a binary algorithm that determines whether a feature is present or not. Finally, there is also the Gaussian model (not widely used for text classification), which is based on a continuous distribution.
 
->The Naive Bayes algorithm is based on Bayes' theorem, which states that the features of a data set must be mutually independent. This assumption is not usually true, however after reading about the subject, it was found that "...in practice Naive Bayes models have performed surprisingly well, even on complex tasks where it is clear that strong independence assumptions are false..."
+The Naive Bayes algorithm is based on Bayes' theorem, which states that the features of a data set must be mutually independent. This assumption is not usually true, however after reading about the subject, it was found that "...in practice Naive Bayes models have performed surprisingly well, even on complex tasks where it is clear that strong independence assumptions are false..."
 
 >**Text preprocessing**
 
