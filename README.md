@@ -3,7 +3,7 @@ NLP model to classify Paycheck Protection Program (PPP) borrowers
 
 ##**Objective:** ## To build a natural language processing model to classify Paycheck Protection Program (PPP) borrowers into companies or individuals based on their names.
 
-##**Context**
+## **Context**
 Paycheck Protection Program (PPP) loans are implemented by the U.S. Small Business Administration with support from the Department of the Treasury.  This program provides small businesses with funds to pay up to 8 weeks of payroll costs, including benefits. The funds can also be used to pay interest on mortgages, rent and utilities. The Paycheck Protection Program (PPP) prioritizes millions of Americans employed by small businesses by authorizing up to $659 billion for job maintenance and certain other expenses.
 
 A list of PPP borrowers is available, however, the data does not clearly distinguish whether the borrowers are businesses or individuals. Therefore, the objective is to find a way to classify the list of PPP borrowers into businesses and individuals. On the other hand, two different datasets are available, one with a list of firms and one with a list of individuals. From these two datasets, a natural language processing model is proposed to classify which PPP loan borrowers are companies or individuals from their names. 
