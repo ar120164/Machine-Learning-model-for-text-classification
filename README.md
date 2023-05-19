@@ -49,7 +49,7 @@ The output is a vector of size equal to the number of observations in x_test, co
 
 After training, testing and cross-validating a multinomial Naive Bayes using the names of all registered companies in Florida and the names of voters in the same state, we observed an overall model accuracy of about 98%, showing a confident ability of the model to classify PPP borrowers into companies or individuals using their names.
 
->Although words such as SMALL, INC or LLC are not the most common words for companies in the data with which the model was built and validated, it is clear that they are important in the classification. This, given that after applying the model on the names of the PPP borrowers, they are very common in the observations classified as companies.
+Although words such as SMALL, INC or LLC are not the most common words for companies in the data with which the model was built and validated, it is clear that they are important in the classification. This, given that after applying the model on the names of the PPP borrowers, they are very common in the observations classified as companies.
 
 ## **Conclusions**
 It is expected that researchers can use the classification of PPP borrowers to develop other analyses to compare individuals and firms.
