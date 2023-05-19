@@ -10,12 +10,11 @@ A list of PPP borrowers is available, however, the data does not clearly disting
 
 **Development**
 
->**Model selection**
+  **Model selection**
 To select the model, a search was conducted on what models are used for classifying text into categories. In this search, we found a Multinomial Naive Bayes model developed for an analogous case in which the objective was to find the country of origin of a person from his or her name. With this example in mind and what we consulted about its advantages (text mining friendly, faster convergence than other models such as logistic regression, highly scalable and easily handles large datasets), it was decided to apply Multinomial Naive Bayes. However, some of the options found as alternative models are Bernoulli Naive Bayes (another type of Naive Bayes), Logistic Regression, k-Nearest Neighbors, decision trees and support vector machine.
-
->The Naive Bayes learning algorithm is widely used in text classification problems because it is computationally efficient and simple to implement. It employs the bag-of-words approach, in which individual words in the document serve as features, ignoring word order. There are two types of event models that are widely used: 
--Bernoulli multivariate event model .
--Bayes multivariate event model.
+The Naive Bayes learning algorithm is widely used in text classification problems because it is computationally efficient and simple to implement. It employs the bag-of-words approach, in which individual words in the document serve as features, ignoring word order. There are two types of event models that are widely used: 
+- Bernoulli multivariate event model .
+- Bayes multivariate event model.
 
 >The multinomial Naive Bayes algorithm refers to a vector of features in which each term reflects the number of times it occurs or the frequency with which it appears. Bernoulli, on the other hand, is a binary algorithm that determines whether a feature is present or not. Finally, there is also the Gaussian model (not widely used for text classification), which is based on a continuous distribution.
 
@@ -38,14 +37,14 @@ vFinally, the data will be randomly split into training and test sets with a spl
 
 >The output is a vector of size equal to the number of observations in x_test, containing the classifications of each observation in terms of whether it is a person (0) or whether it is a company (1). To classify the new information with this model, the vectorizer was used to transform the new input data into word count vectors. Subsequently, the predict function is used again on the transformed data to obtain the classification.
 
-**Results **
+**Results**
 
 >**Data characteristics.**
 -Voter data set: In general, some letters are the most common in voters' names, this occurs because voters' names include the middle name which is sometimes represented only by initials in the dataset. Other features with high frequency correspond to first or middle names such as ANN, MARIE, LEE, LYNN, etc.
 
--Company dataset: The most important character here is "&", which is one of the most common company traits in the PPP borrower name dataset and with which the model can apparently identify that the observations containing it are companies. In contrast to names, individual letters are not as common here. Instead, words that are very characteristic of company names, such as SERVICES, GROUP, COMPANIES, INVESTMENTS, and MANAGEMENT, are important for the identification of these companies.
+- Company dataset: The most important character here is "&", which is one of the most common company traits in the PPP borrower name dataset and with which the model can apparently identify that the observations containing it are companies. In contrast to names, individual letters are not as common here. Instead, words that are very characteristic of company names, such as SERVICES, GROUP, COMPANIES, INVESTMENTS, and MANAGEMENT, are important for the identification of these companies.
 
--PPP borrower name dataset: The most common words in the PPP borrower name dataset are usually related to companies (with the exception of letters such as A, M, S and J).
+- PPP borrower name dataset: The most common words in the PPP borrower name dataset are usually related to companies (with the exception of letters such as A, M, S and J).
 
 >After training, testing and cross-validating a multinomial Naive Bayes using the names of all registered companies in Florida and the names of voters in the same state, we observed an overall model accuracy of about 98%, showing a confident ability of the model to classify PPP borrowers into companies or individuals using their names.
 
